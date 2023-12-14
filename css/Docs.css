@@ -1,0 +1,62 @@
+/* ----------------------Docs styling---------------------- */
+
+/* Documentation styling */
+main .documentation .mt {
+    position: relative;
+    width: fit-content;
+    color: var(--main-red-clr) !important
+}
+main .documentation .mt::before {
+    content: '#';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    opacity: 0;
+    transition: var(--main-trans)
+}
+main .documentation .subt {
+    position: relative;
+    width: fit-content;
+    color: var(--main-clr) !important
+}
+main .documentation .subt::before {
+    content: '*';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    opacity: 0;
+    transition: .2s
+}
+main .documentation .mt:hover::before,
+main .documentation .subt:hover::before {opacity: 1}
+main .documentation p {
+    color: #444;
+    font-size: 20px;
+    line-height: 1.8;
+    word-spacing: 2px
+}
+@media (max-width: 576px) {
+    main .documentation p {font-size: 19px}
+}
+main .documentation .image {
+    background-color: #777;
+    height: 300px;
+    width: 600px
+}
+main .documentation .link-card {
+    height: 170px;
+    background-size: cover;
+    transition: var(--main-trans)
+}
+main .documentation .link-card:hover {
+    transform: scale(1.05);
+    filter: grayscale(1)
+}
+main .documentation .link-card h4 {transition: var(--main-trans)}
+main .documentation .link-card p {
+    font-size: 19px;
+    transition: var(--main-trans)
+}
+/* Documentation styling */
+
+/* ----------------------Docs styling---------------------- */

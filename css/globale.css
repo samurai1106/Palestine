@@ -1,0 +1,242 @@
+/* Global styling */
+* {
+    margin: 0;
+    Padding: 0;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+::-webkit-scrollbar {
+    height: 6px;
+    width: 6px
+}
+::-webkit-scrollbar-track {background-color: transparent}
+::-webkit-scrollbar-thumb {
+    background-color: #479F76;
+    border-radius: 10px
+}
+::-webkit-scrollbar-thumb:hover {background-color: var(--main-clr)}
+:root {
+    scrollbar-color: #479F76 transparent;
+    scrollbar-width: thin;
+    --main-black-clr: #111111;
+    --main-clr: #009736;
+    --main-red-clr: #EE2A35;
+    --main-trans: .4s
+}
+body {scroll-behavior: smooth}
+a {text-decoration: none !important}
+ul {list-style: none}
+.black-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 , 0 , 0 , .6)
+}
+.rotate-icone {transform: rotate(180deg) !important}
+.show {display: block !important}
+.show-scroll-icone {visibility: visible !important}
+#scroll-up {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    left: 20px;
+    color: var(--main-clr);
+    border: 2px solid var(--main-clr);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer !important;
+    opacity: .3;
+    transition: var(--main-trans);
+    visibility: hidden
+}
+#scroll-up:hover {opacity: 1}
+@media(max-width: 768px) {
+    #scroll-up{
+        bottom: 10px;
+        left: 10px
+    }
+}
+#side-bar-btn {
+    width: 50px;
+    height: 50px;
+    top: 150px;
+    left: 20px;
+    background-color: var(--main-clr);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer !important;
+    opacity: .5;
+    z-index: 500;
+    transition: var(--main-trans)
+}
+#side-bar-btn:hover {opacity: .8}
+@media(max-width: 768px) {
+    #side-bar-btn{
+        bottom: 55px;
+        left: 10px
+    }
+}
+.row {row-gap: 20px}
+/* Global styling */
+
+/* ----------------------All pages styling---------------------- */
+
+/* Navbar styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000
+}
+@media (max-width: 576px) {
+    nav {flex-direction: column}
+}
+nav .logo {
+    height: 56px;
+    display: flex;
+    align-items: center
+}
+nav .logo a img {
+    width: 60px;
+    border-radius: 5px;
+    transition: var(--main-trans)
+}
+@media (max-width: 576px) {
+    nav .logo a img {width: 50px}
+    nav .logo:hover a img {transform: translateX(20px)}
+}
+nav .logo .name {
+    font-weight: 500;
+    top: 50%;
+    left: -170%;
+    transform: translateY(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--main-trans)
+}
+nav .logo:hover .name {
+    visibility: visible;
+    opacity: 1;
+    left: -200%
+}
+@media (max-width: 576px) {
+    nav .logo .name {font-size: 14px}
+    nav .logo:hover .name {left: -170%}
+}
+nav .links li a {
+    position: relative;
+    display: block;
+    color: var(--main-black-clr);
+    padding: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--main-trans)
+}
+nav .links li a:hover {background-color: rgb(0, 153, 54, .1)}
+nav .links li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-clr);
+    transition: var(--main-trans)
+}
+nav .links li a:hover::before {left: 0}
+@media (max-width: 576px) {
+    nav .links li a {
+        padding: 0.75rem;
+        font-size: 14px
+    }
+}
+/* Navbar styling */
+
+/* Aside styling */
+main aside {
+    position: sticky;
+    padding: 1rem;
+    top: 0;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    z-index: 2000;
+    scrollbar-width: thin
+}
+main aside .links {padding: 0}
+main aside .links > li {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    border-right: 3px solid var(--main-clr)
+}
+@media (max-width: 1200px) {
+    main aside .links > li a,
+    main aside .links > li svg {font-size: 14px} 
+}
+main aside .links > li a,
+main aside .links > li svg {color: var(--main-clr)}
+main aside .links > li a {
+    display: block;
+    max-width: calc(100% - 15px)
+}
+main aside .links > li #drop-btn {
+    top: 50%;
+    left: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    cursor: pointer
+}
+main aside .sub-links {
+    padding: 0 1rem 0;
+    display: none
+}
+main aside .sub-links li a {
+    width: fit-content;
+    color: var(--main-black-clr);
+    font-size: 14px;
+    transition:  var(--main-trans);
+    border-radius: 10px
+}
+@media (max-width: 1200px) {
+    main aside .sub-links li a {font-size: 12px}
+}
+main aside .sub-links li a:hover,
+main aside .active {
+    display: block;
+    background-color: rgb(0, 0, 0, .7);
+    color: #fff !important
+}
+
+@media (max-width: 992px) {
+    main aside {
+        margin: 0 !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100%;
+        background-image: linear-gradient(#479F76, #0F5132) !important;
+        display: none
+    }
+    main aside #X-mark {
+        width: fit-content;
+        cursor: pointer
+    }
+    main aside .links {margin-top: 50px}
+}
+/* Aside styling */
+
+/* Footer */
+footer {background-color: var(--main-black-clr)}
+/* Footer */
+
+/* ----------------------All pages styling---------------------- */
