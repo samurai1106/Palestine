@@ -38,10 +38,31 @@ main .documentation p {
 @media (max-width: 576px) {
     main .documentation p {font-size: 19px}
 }
+main .documentation .pers-image,
 main .documentation .image {
     background-color: #777;
-    height: 300px;
-    width: 600px
+    overflow: hidden;
+    border-radius: 4px
+}
+main .documentation .image {
+    height: 500px;
+    max-width: 900px;
+}
+main .documentation .pers-image {
+    height: 170px;
+    width: 150px;
+}
+@media(max-width: 768px) {
+    main .documentation .image {height: 400px;}
+}
+@media(max-width: 576px) {
+    main .documentation .image {height: 240px;}
+}
+main .documentation .pers-image img,
+main .documentation .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 main .documentation .link-card {
     height: 170px;
