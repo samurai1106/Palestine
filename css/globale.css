@@ -224,7 +224,7 @@ main aside .active {
         left: 0;
         width: 100% !important;
         height: 100%;
-        background-image: linear-gradient(#479F76, #0F5132) !important;
+        background-color: linear-gradient(#479F76, #0F5132) !important;
         display: none
     }
     main aside #X-mark {
