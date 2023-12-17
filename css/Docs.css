@@ -50,9 +50,12 @@ main .documentation .image {
     box-shadow: var(--bs-box-shadow)
 }
 main .documentation .pers-image {
-    height: 170px;
+    height: 180px;
     width: 150px;
     box-shadow: var(--bs-box-shadow)
+}
+@media(max-width: 576px) {
+    main .documentation .pers-image {margin: 0 auto}
 }
 @media(max-width: 768px) {
     main .documentation .image {height: 400px}
