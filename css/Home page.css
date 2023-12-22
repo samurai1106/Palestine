@@ -3,8 +3,7 @@
 /* Landing Section */
 .landing {
     height: calc(100vh - 96px); 
-    overflow: hidden;
-
+    overflow: hidden
 }
 @media (max-width: 576px) {
     .landing {height: calc(100vh - 141px)}
@@ -17,12 +16,12 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: 1s;
+    transition: 1s
 }
 .landing .img-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover
 }
 .landing #next,
 .landing #prev {
